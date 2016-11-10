@@ -7,7 +7,6 @@
   "dependencies": {
     "meteor-node-stubs": "~0.2.0"
   },
-  "engines": {
-    "node": "4.4.7"
-  }
+
+  "engines" : { "node" : "4.4.7" }
 }
