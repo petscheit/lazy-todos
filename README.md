@@ -1,1 +1,1 @@
-# lazy-todos
+Working on integrating this app with my nodejs server running on a raspberry pi. The PI has magnetic Door sensors connected to it and also listens for ARP request from Dash buttons in my wifi. Basic idea of this app (making it mostly for iOS) is a todo list that has the option "remind me when I leave/arrive my house". Will merge projects once everything is complet :) lets see how this plays out?
