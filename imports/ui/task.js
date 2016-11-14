@@ -11,7 +11,11 @@ Template.task.events({
       $set: { checked: ! this.checked },
     });
   },
-  'click .delete'() {
-    Tasks.remove(this._id);
+  'click .complete'() {
+    Tasks.update(this._id, {
+      $set: { completed: true,
+              completedAt: new Date(),
+            },
+    });
   },
 });
