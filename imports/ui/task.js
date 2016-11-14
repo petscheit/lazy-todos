@@ -13,9 +13,10 @@ Template.task.events({
   },
   'click .complete'() {
     Tasks.update(this._id, {
-      $set: { completed: true,
-              completedAt: new Date(),
-            },
+      $set: {
+        completed: true,
+        completedAt: new Date(),
+      },
     });
   },
 });
