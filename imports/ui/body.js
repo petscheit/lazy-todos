@@ -4,7 +4,7 @@ import { Tasks } from '../api/tasks.js';
 
 import './body.html';
 import './task.js';
-var homeReminderBool;
+var homeReminderBool; //initializing variable for event
 
 Template.body.helpers({
   tasks() {
@@ -13,32 +13,35 @@ Template.body.helpers({
 });
 
 Template.body.events({
+  //logic for homeReminder setting
   'click .homeReminder'(){
-    console.log(homeReminderBool);
     if (homeReminderBool == null){
       homeReminderBool = true;
     } else {
       homeReminderBool = !homeReminderBool;
     }
-    console.log(homeReminderBool);
   },
 
   'submit .new-task'(event) {
     event.preventDefault();
-
+    if(homeReminderBool == undefined) homeReminderBool = false;
+    console.log(homeReminderBool);
     // Get value from form element
     const target = event.target;
     const text = target.text.value;
+    const homeReminder = homeReminderBool
 
     // Insert a task into the collection
     if (text != ''){
       Tasks.insert({
         text,
+        homeReminder,
         createdAt: new Date(), // current time
       });
     }
 
     // Clear form
     target.text.value = '';
+    $(".homeReminder").prop("checked", false);
   },
 });
