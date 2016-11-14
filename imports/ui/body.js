@@ -4,6 +4,7 @@ import { Tasks } from '../api/tasks.js';
 
 import './body.html';
 import './task.js';
+var homeReminderBool;
 
 Template.body.helpers({
   tasks() {
@@ -12,6 +13,16 @@ Template.body.helpers({
 });
 
 Template.body.events({
+  'click .homeReminder'(){
+    console.log(homeReminderBool);
+    if (homeReminderBool == null){
+      homeReminderBool = true;
+    } else {
+      homeReminderBool = !homeReminderBool;
+    }
+    console.log(homeReminderBool);
+  },
+
   'submit .new-task'(event) {
     event.preventDefault();
 
