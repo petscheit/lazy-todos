@@ -1,6 +1,5 @@
 import { Template } from 'meteor/templating';
 import { Tasks } from '../api/tasks.js';
-
 import './body.html';
 import './task.js';
 var homeReminderBool; //initializing variable for event
@@ -8,6 +7,10 @@ var homeReminderBool; //initializing variable for event
 Template.body.helpers({
   tasks() {
     return Tasks.find({completed: false}, { sort: { createdAt: -1 } });
+  },
+
+  completedTasks() {
+    return Tasks.find({completed: true}, { sort: { completedAt: -1 } });
   },
 });
 
