@@ -1,4 +1,5 @@
 import './completedTask.html';
+import { Tasks } from '../api/tasks.js';
 
 Template.completedTask.events({
   'click .redo'() {

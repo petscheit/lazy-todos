@@ -12,6 +12,7 @@ Template.body.helpers({
 
   completedTasks() {
     var dbEntries = Tasks.find({completed: true}, { sort: { completedAt: -1 } }).fetch();
+    //iterates over db query and uses results to calculate h, day or months when task was completed.
     _.each(dbEntries, function(entry){
       var timeDifference = (new Date().getTime() - entry.completedAt.getTime())
       if (timeDifference <  86400000){
