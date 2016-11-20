@@ -68,7 +68,7 @@ ul {
   background: white;
 }
 
-.complete {
+.complete, .redo {
   float: right;
   font-weight: bold;
   background: none;
