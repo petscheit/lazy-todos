@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { Tasks } from '../api/tasks.js';
 import './body.html';
 import './task.js';
+import './completedTask.js';
 var homeReminderBool; //initializing variable for event
 
 Template.body.helpers({
