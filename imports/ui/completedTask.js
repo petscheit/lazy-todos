@@ -1,7 +1,3 @@
-import { Template } from 'meteor/templating';
-
-import { Tasks } from '../api/tasks.js';
-
 import './completedTask.html';
 
 Template.completedTask.events({
