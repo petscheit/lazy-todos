@@ -9,6 +9,9 @@ Template.completedTask.events({
             },
     });
   },
+  'click .delete'() {
+    Tasks.remove({_id: this._id});
+  },
 })
 
 
