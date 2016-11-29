@@ -19,4 +19,8 @@ Template.task.events({
       },
     });
   },
+  'click .edit-task-button'(){
+    console.log('here');
+    // $(this).closest('.text').removeAttr('readonly').focus();
+  }
 });
