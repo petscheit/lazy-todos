@@ -1,9 +1,7 @@
 <body>
   <div class="container">
     <header>
-
       <h1>On your plate:</h1>
-
       <form class="new-task">
         <input type="text" name="text" placeholder="Type to add new tasks" />
         <input type="checkbox" class="homeReminder" />
@@ -15,11 +13,18 @@
         {{> task}}
       {{/each}}
     </ul>
+
     <h2>Completed</h2>
     <ul>
       {{#each completedTasks}}
         {{> completedTask}}
       {{/each}}
     </ul>
+    <ul>
+        {{> alarm }}
+    </ul>
+
+    {{> speech }}
+
   </div>
 </body>

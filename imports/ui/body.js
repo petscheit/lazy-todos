@@ -1,7 +1,10 @@
 import { Template } from 'meteor/templating';
 import { Tasks } from '../api/tasks.js';
+import { Autos } from '../api/tasks.js';
 import './body.html';
 import './task.js';
+import './speech.js'
+import './alarm.js';
 import './completedTask.js';
 var homeReminderBool; //initializing variable for event
 
@@ -37,6 +40,10 @@ Template.body.events({
     }
   },
 
+  'click .voice-command'(){
+    alert('huhu')
+  },
+
   'submit .new-task'(event) {
     event.preventDefault();
     if(homeReminderBool == undefined) homeReminderBool = false;
@@ -62,3 +69,11 @@ Template.body.events({
     $(".homeReminder").prop("checked", false);
   },
 });
+
+
+
+
+
+
+
+
